@@ -5,8 +5,8 @@ class NewsController {
         res.render('news')
     }
 
-    show(req,res) {
-        console.log('NEW DETAILS!!!')
+    show(req, res) {
+        res.send('NEW DETAILS!!!')
     }
 
 }

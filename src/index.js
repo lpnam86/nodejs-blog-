@@ -14,13 +14,16 @@ app.use(express.urlencoded())
 
 
 //http logger
-app.use(morgan('combined'))
+// app.use(morgan('combined'))
 
 //template engine
 app.engine('hbs', handlebars.engine({
   extname: '.hbs'
 }))
-app.set('view engine', 'hbs')
+app.set(
+  'view engine', 'hbs'
+)
+
 app.set('views', path.join(__dirname, 'resources/views'));
 
 
@@ -29,5 +32,5 @@ route(app)
 
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
+  console.log(`App listening at http://localhost:${port}`)
 })   
